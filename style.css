@@ -1,0 +1,83 @@
+@media only screen and (min-width : 1024px){
+  body{
+    color: #421;
+    font-weight: bold;
+    font-size: 20px;
+    background: skyblue;
+    background-image: url("img5.jpeg");
+    background-repeat: repeat-y;
+  }
+  span {
+    color: red;
+  }
+  ::-webkit-input-placeholder{
+    color:#421;
+  }
+  #main {
+    position: fixed;
+    top: 40%;
+    right: 60px;
+    width: 400px;
+    border: 0px solid #421;
+    padding: 40px;
+  }
+  #main div{
+    margin: 10px;
+  }
+  #input{
+    border: 0;
+    background: #EBE547;
+    padding: 5px;
+    border: 1px solid #421;
+  }
+
+  .maiq{
+    margin-left: 660px;
+    margin-top: 30px;
+  }
+
+}
+
+@media only screen and (max-width : 667px){
+
+  body{
+    color: #421;
+    font-weight:bold;
+    font-size: 12px;
+    background: skyblue;
+    background-image: url("img9.jpeg");
+    background-repeat:repeat-x;
+  }
+  span {
+    color: red;
+  }
+  ::-webkit-input-placeholder{
+    color:#421;
+  }
+  #main {
+    position: absolute;
+    top: 40%;
+    left: -48px;
+    margin-top: 200px;
+    width: 400px;
+    border: 0px solid #421;
+    padding: 40px;
+  }
+  #main div{
+      margin: 10px;
+  }
+  #input{
+    border: 0;
+    background: #EBE547;
+    padding: 5px;
+    border: 1px solid #421;
+  }
+
+  .maiq{
+    margin-left: 0px;
+    margin-top: 320px;
+  }
+
+}
+
+}

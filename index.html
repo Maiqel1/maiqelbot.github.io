@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MaiqBOT!</title>
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <section class="maiq">
+      <h2>WELCOME!</h2>
+      <p>Hey there!, I'm MaiqBOT!, Your Friendly neighbourhood Bot<br>here to keep you updated on all the latest Covid19 news in Nigeria!</p>
+      <p>If you're not up for that, We could always have a nice, friendly conversation<br> and hey!, I'm also here if you have any mathematical problems that need<br> solving!...Just in case:)</p>
+      <p>To get started simply say Hello!, To chat say Hi!</p>
+    </section>
+  </head>
+  <body>
+    <div id="main">
+        <div>USER: <span id="user"></span></div>
+      <div>MaiqBOT: <span id="MaiqBOT"></span></div>
+      <div><input id="input" type="text" placeholder="Type Hello..." autocomplete="off"/></div>
+    </div>
+    <script type="text/javascript">
+    var trigger = [
+      ["hi", "hey"],
+      ["hello"],
+      ["covid", "covik", "covid19", "corona", "virus", "coronavirus"],
+      ["update", "updates", "updated"],
+      ["states", "state"],
+      ["lagos cases", "lagoscases"],
+      ["abuja cases", "abujacases", "fct cases", "fct cases"],
+      ["kano cases", "kano,cases"],
+      ["oyo cases", "oyocases"],
+      ["edo cases", "edocases"],
+      ["rivers", "riverscases"],
+      ["ogun cases", "oguncases"],
+      ["kaduna cases", "kadunacases"],
+      ["borno cases", "bornocases"],
+      ["gombe cases", "gombecases"],
+      ["bauchi cases", "bauchicases"],
+      ["katsina cases", "katsinacases"],
+      ["delta cases", "deltacases"],
+      ["jigawa cases", "jigawacases"],
+      ["ebonyi cases", "ebonyicases"],
+      ["abia cases", "ebonyicases"],
+      ["plateau cases", "plateaucases"],
+      ["imo cases", "imocases"],
+      ["nasarawa cases", "nasarawacases"],
+      ["kwara cases", "kwaracases"],
+      ["sokoto cases", "sokotocases"],
+      ["bayelsa cases", "bayelsacases"],
+      ["ondo cases", "ondocases"],
+      ["enugu cases", "enugucases"],
+      ["zamfara cases", "zamfaracases"],
+      ["kebbi cases", "kebbicases"],
+      ["anambra cases", "anambracases"],
+      ["niger cases", "nigercases"],
+      ["akwa ibom cases", "akwaibomcases", "akwa ibomcases", "akwaibom cases"],
+      ["yobe cases", "yobecases"],
+      ["osun cases", "osuncases"],
+      ["adamawa cases", "adamawacases"],
+      ["benue cases", "benuecases"],
+      ["ekiti cases", "ekiticases"],
+      ["taraba cases", "tarabacases"],
+      ["kogi cases", "kogicases"],
+      ["symptoms"],
+      ["prevention"],
+      ["hotlines"],
+      ["benue hotlines", "benue hotline"],
+      ["abuja hotlines", "abuja hotline"],
+      ["kogi hotlines", "kogi hotline"],
+      ["kwara hotlines", "kwara hotline"],
+      ["nasarawa hotlines", "nasarawa hotline"],
+      ["niger hotlines", "niger hotline"],
+      ["plateau hotlines", "plateau hotline"],
+      ["adamawa hotlines", "adamawa hotline"],
+      ["borno hotlines", "borno hotline"],
+      ["bauchi hotlines", "bauchi hotline"],
+      ["gombe hotlines", "gombe hotline"],
+      ["taraba hotlines", "taraba hotline"],
+      ["yobe hotlines", "yobe hotline"],
+      ["jigawa hotlines", "jigawa hotline"],
+      ["kaduna hotlines", "kaduna hotline"],
+      ["kano hotlines", "kano hotline"],
+      ["katsina hotlines", "katsina hotline"],
+      ["kebbi hotlines", "kebbi hotline"],
+      ["sokoto hotlines", "sokoto hotline"],
+      ["zamfara hotlines", "zamfara hotline"],
+      ["abia hotlines", "abia hotline"],
+      ["anambra hotlines", "anambra hotline"],
+      ["ebonyi hotlines", "ebonyi hotline"],
+      ["enugu hotlines", "enugu hotline"],
+      ["imo hotlines", "imo hotline"],
+      ["akwa ibom hotlines", "benue hotline"],
+      ["bayelsa hotlines", "benue hotline"],
+      ["cross river hotlines", "cross river hotline"],
+      ["delta hotlines", "delta hotline"],
+      ["edo hotlines", "edo hotline"],
+      ["rivers hotlines", "rivers hotline"],
+      ["ogun hotlines", "benue hotline"],
+      ["ondo hotlines", "benue hotline"],
+      ["osun hotlines", "benue hotline"],
+      ["oyo hotlines", "benue hotline"],
+      ["ekiti hotlines", "ekiti hotline"],
+      ["lagos hotlines", "lagos hotline"],
+      ["how are you", "how is life", "how are things"],
+    	["what are you doing", "what is going on"],
+    	["how old are you"],
+    	["who are you", "are you human", "are you bot", "are you human or bot"],
+    	["who created you", "who made you"],
+    	["your name please",  "your name", "may i know your name", "what is your name"],
+    	["i love you"],
+    	["happy", "good"],
+    	["bad", "bored", "tired"],
+    	["help me", "tell me story", "tell me joke"],
+    	["ah", "yes", "ok", "okay", "nice", "thanks", "thank you"],
+    	["bye", "good bye", "goodbye", "see you later"],
+      ["im fine", "fine", "i'm fine", "good", "i'm good", "im good", "cool", "i'm cool"],
+      ["human", "i'm human", "i am human", "human being", "i'm a human being"],
+      ["hw far", "how far"]
+    ];
+    var reply = [
+      ["Hi", "Hey", "Hello", "Hey There!", "Hello!, How do you do?"],
+      ["Hey! To know more about covid19 in Nigeria type 'Covid'"],
+      ["Hi!  for updates on the latest number of cases, type 'update',  to know the symptoms of Covid19, type 'symptoms',  for prevention techniques, type 'prevention',  for NCDC hotlines, type 'hotlines'"],
+      ["As of today, 19/06/2020, there 19147 confirmed cases of covid19 in Nigeria, with 6581 people discharged and sadly, 487 deaths. To know the number of cases per state, type 'states'."],
+      ["To know the number of cases in a particular state, Type the name of the state followed by cases!. For example, 'abuja cases' "],
+      ["8177"],
+      ["1489"],
+      ["1182"],
+      ["809"],
+      ["748"],
+      ["739"],
+      ["623"],
+      ["527"],
+      ["465"],
+      ["451"],
+      ["447"],
+      ["426"],
+      ["418"],
+      ["317"],
+      ["234"],
+      ["221"],
+      ["207"],
+      ["205"],
+      ["181"],
+      ["180"],
+      ["135"],
+      ["128"],
+      ["128"],
+      ["126"],
+      ["76"],
+      ["67"],
+      ["66"],
+      ["66"],
+      ["65"],
+      ["56"],
+      ["54"],
+      ["42"],
+      ["39"],
+      ["32"],
+      ["18"],
+      ["3"],
+      ["Common symptoms of covid19 include fever, dry cough, tiredness. Less common symptoms include aches and pains, conjunctivitis, headache, loss of taste or smell, sore throat. Serious symptoms include difficulty breathing or shortness of breath, chest pain or pressure, loss of speech or movement. Seek immediate medical attention if you have serious symptoms."],
+      ["Stay home as much as you can, Keep a safe distance, Wash hands often, Cover your cough, sick?Call ahead."],
+      ["NCDC toll-free hotline:0800-970000-10. To know Hotlines for a particular state, type the name of the state followed by 'hotlines' e.g 'kwara hotlines'"],
+      ["09018602439, 07025031214, 08033696511"],
+      ["08099936312, 08099936313"],
+      ["07088292249, 08150953486"],
+      ["09062010001, 09062010002"],
+      ["08036018579, 08035871718"],
+      ["08038246018, 09093093642"],
+      ["07032864444, 08035422711"],
+      ["08031230359, 07080601139"],
+      ["08088159881"],
+      ["08059600898, 08036916398"],
+      ["08103371257, 07026256569"],
+      ["08065508675, 08032501165"],
+      ["08131834764, 07041116027"],
+      ["08035997118, 08036440532"],
+      ["08035871662, 08025088304"],
+      ["08039704476, 08037038597"],
+      ["09035037114, 09047092428"],
+      ["08036782507, 08036074588"],
+      ["08032311116, 08022069567"],
+      ["08035626731, 08035161538"],
+      ["07002242362"],
+      ["09034728047, 09034668319"],
+      ["09020332489, 08159279460"],
+      ["08182555550, 09022333833"],
+      ["07043954215, 09059995559"],
+      ["08189411111, 09045575515"],
+      ["08039216821, 07019304970"],
+      ["09036281412, 08050907736"],
+      ["08031230480, 08031230481"],
+      ["08084096723, 08064258163"],
+      ["08056109538, 08031888093"],
+      ["08188978393, 08188978392"],
+      ["07002684319, 07012684319"],
+      ["08035025692, 08033908772"],
+      ["08095394000, 08095963000"],
+      ["09062970434, 09062970435"],
+      ["08023169485, 08033565529"],
+      ["Fine", "Pretty well", "Fantastic"],
+    	["Nothing much", "About to go to sleep", "Can you guess?", "I don't know actually"],
+    	["I am 1 day old"],
+    	["I am just a bot", "I am a bot. What are you?"],
+    	["Maiqel, My Zaddy"],
+    	["I am MaiqBOT", "MaiqBOT of course!"],
+    	["I love you too", "Me too"],
+    	["Have you ever felt bad?", "Glad to hear it"],
+    	["Why?", "Why? You shouldn't!", "Try watching TV"],
+    	["I will", "What about?"],
+    	["Tell me a story", "Tell me a joke", "Tell me about yourself", "You are welcome"],
+    	["Bye", "Goodbye", "See you later"],
+      ["thats good to hear!, Ask me anything"],
+      ["woww, thats so nice"],
+      ["i just dey o, hw tinz na?"]
+
+    ];
+    var alternative = ["uhmm.... This is awkward...try typing hello to begin!"]
+      document.querySelector("#input").addEventListener("keypress", function(e){
+        var key = e.which || e.KeyCode;
+        if(key === 13){
+          var input = document.getElementById("input").value;
+          document.getElementById("user").innerHTML = input;
+          output(input);
+        }
+      });
+      function output(input) {
+        try{
+           var product = input + "=" + eval(input);
+        } catch(e){
+          var text = (input.toLowerCase()).replace(/[^\w\s\d]/gi, "");
+          text = text.replace(/ a /g, " ");
+          if(compare(trigger, reply, text)){
+            var product = compare(trigger, reply, text)
+          } else{
+              var product = alternative[Math.floor(Math.random()*alternative.length)];
+          }
+      }
+        document.getElementById("MaiqBOT").innerHTML = product;
+        document.getElementById("input").value = "";
+      }
+      function compare(arr, array, string) {
+        var item;
+        for(var x=0; x<arr.length; x++){
+          for(var y=0; y<array.length; y++){
+            if(arr[x][y] == string){
+              items = array[x];
+              item = items[Math.floor(Math.random()*items.length)];
+            }
+          }
+        }
+        return item;
+      }
+    </script>
+  </body>
+</html>
